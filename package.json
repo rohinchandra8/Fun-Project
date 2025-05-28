@@ -12,7 +12,8 @@
     "next": "15.1.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-dropzone": "^14.3.8"
+    "react-dropzone": "^14.3.8",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

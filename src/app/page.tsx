@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-bold bg-gradient-to-b from-green-600 to-green-500 bg-clip-text text-transparent pb-0.5 leading-normal">
           AI Swing Coach
         </h1>
         <p className="text-gray-600 mt-3 text-lg">
@@ -34,7 +34,7 @@ export default function Home() {
       
       <div 
         {...getRootProps()} 
-        className={`w-full max-w-2xl p-8 rounded-xl border-2 border-dashed transition-all duration-200 ease-in-out backdrop-blur-sm
+        className={`w-full max-w-2xl p-8 rounded-xl border-2 border-dashed transition-all duration-200 ease-in-out backdrop-blur-sm cursor-pointer
           ${isDragActive 
             ? 'border-green-500 bg-green-50/50' 
             : 'border-green-300 bg-white/30 hover:border-green-400 hover:bg-white/40'
@@ -43,28 +43,12 @@ export default function Home() {
         <input {...getInputProps()} />
         <div className="flex flex-col items-center justify-center text-center space-y-4">
           <div className="p-4 rounded-full bg-green-100">
-            {/* Golf ball and tee icon */}
-            <svg 
-              className="w-12 h-12 text-green-600" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="1.5" 
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-              />
-              <circle 
-                cx="12" 
-                cy="12" 
-                r="8" 
-                strokeWidth="1.5" 
-                className="opacity-50"
-              />
-            </svg>
+            {/* Golf swing icon image */}
+            <img 
+              src="/icons/Swing_Icon.png" 
+              alt="Golf swing icon" 
+              className="w-12 h-12 object-contain mx-auto"
+            />
           </div>
           
           <div className="space-y-2">
@@ -91,10 +75,6 @@ export default function Home() {
             </button>
           )}
         </div>
-      </div>
-      
-      <div className="mt-8 text-center text-sm text-gray-500">
-        Upload your video to receive detailed insights about your golf swing
       </div>
     </main>
   );
